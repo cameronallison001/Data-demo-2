@@ -23,11 +23,11 @@ async function setup() {
     console.log(table); 
 
     date = table.getColumn(0);
-    High = table.getColumn(1);
-    Low = table.getColumn(2);
-    Open = table.getColumn(3);
-    Close = table.getColumn(4);
-    Volume = table.getColumn(5);
+    high = table.getColumn(1);
+    low = table.getColumn(2);
+    open = table.getColumn(3);
+    close = table.getColumn(4);
+    volume = table.getColumn(5);
 
 
 }
@@ -39,7 +39,16 @@ function draw() {
     for (let i = 0; i < table.getRowCount(); i++) {
         let textX = random(width);
         let textY = random(height);
-        text(date[i], textX, textY);
+        let scale = width / 1000; // Adjust the scale factor as needed
+
+    //   noStroke();
+    //    fill(255);
+    // circle(textX, textY, volume[i] * scale);
+     
+     
+     textAlign(CENTER, CENTER);
+      fill(255, 0, 0);
+      text(date[i], textX, textY);
     }
     noLoop();
     }
