@@ -1,0 +1,35 @@
+html,body{
+  margin:0;
+  padding:0;
+  background:#fff;
+  overflow:hidden;
+  color:#111;
+  font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+}
+canvas{display:block;}
+.hud{
+  position:fixed; left:16px; top:14px; z-index:10;
+  user-select:none; pointer-events:none;
+}
+.title{
+  font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+  margin-bottom:6px;
+}
+.sub{font-size:11px; color:#555; letter-spacing:.02em;}
+.pill{
+  color:#111; border:1px solid #e6e6e6; padding:1px 6px;
+  border-radius:999px; margin:0 2px;
+}
+.dot{color:#bbb; margin:0 8px;}
+.controls{
+  position:fixed; right:16px; top:14px; z-index:20;
+  display:flex; gap:8px;
+}
+.chip{
+  background:#fff; border:1px solid #e6e6e6; border-radius:999px;
+  padding:6px 10px; font-size:11px; color:#111; cursor:pointer;
+  transition:transform .08s ease,border-color .12s ease;
+}
+.chip:hover{transform:translateY(-1px); border-color:#cfcfcf;}
+.chip:active{transform:translateY(0px) scale(.98);}
+.chip.active{border-color:#111;}

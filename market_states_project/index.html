@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>META — Market States</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/p5@2.2.0/lib/p5.js"></script>
+</head>
+<body>
+  <header class="hud">
+    <div class="title">META — MARKET STATES</div>
+    <div class="sub">
+      <span class="pill">1</span> Price
+      <span class="pill">2</span> Candles
+      <span class="pill">3</span> Volatility
+      <span class="pill">4</span> Volume
+      <span class="dot">•</span> Drag to scrub
+      <span class="dot">•</span> <span class="pill">Space</span> Auto-play
+      <span class="dot">•</span> Click once = sound
+    </div>
+  </header>
+
+  <div class="controls" aria-label="Controls">
+    <button class="chip" data-mode="1" title="Price">1</button>
+    <button class="chip" data-mode="2" title="Candles">2</button>
+    <button class="chip" data-mode="3" title="Volatility">3</button>
+    <button class="chip" data-mode="4" title="Volume">4</button>
+    <button class="chip" id="playBtn" title="Play/Pause">▶</button>
+    <button class="chip" id="soundBtn" title="Sound">♪</button>
+  </div>
+
+  <!-- Data first (works even when double-clicking) -->
+  <script src="data/meta_stock_data.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
